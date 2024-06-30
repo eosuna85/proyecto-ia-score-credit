@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,67 +9,75 @@
     <link rel="stylesheet" href="../static/css/styles.css">
     <script src="../static/js/script.js" defer></script>
 </head>
+
 <body>
     <header>
-        <div class="container header__estilo">
+        <div class="header__estilo">
             <h1 class="header__title">Credit Score Prediction</h1>
         </div>
     </header>
     <main class="container">
-        <form class="formulario__grid" id="predictionForm">
-            <div class="formulario__estilo">
-                <div class="formulario__estilo__div">
-                    <label for="age">Edad del solicitante</label>
-                    <input type="number" id="age" name="age" required>
-                </div>
-                <div class="formulario__estilo__div">
-                    <label for="income">Ingresos</label>
-                    <input type="number" id="income" name="income" required>
-                </div>
-                <div class="formulario__estilo__div">
-                    <label for="loanTenure">Tenencia del Préstamo</label>
-                    <input type="number" id="loanTenure" name="loanTenure" required>
-                </div>
-                <div class="formulario__estilo__div">
-                    <label for="profileScore">Profile Score</label>
-                    <input type="number" id="profileScore" name="profileScore" required>
-                </div>
-            </div>
-            <div class="formulario__estilo">
-                <div class="formulario__estilo__div">
-                    <label for="ltvRatio">Ratio de LTV</label>
-                    <input type="number" id="ltvRatio" name="ltvRatio" step="0.01" required>
-                </div>
-                <div class="formulario__estilo__div">
-                    <label for="A-existingCustomer">Cliente Existente</label>
-                    <div class="estilo__exite__customer">
-                        <span><input type="radio" name="existingCustomer" id="A-existingCustomer" value="Yes" required>
-                            <label for="A-existingCustomer">Yes</label></span>
-                        <span><input type="radio" name="existingCustomer" id="B-existingCustomer" value="No" required>
-                            <label for="B-existingCustomer">No</label></span>
+        <form class="form__main" id="predictionForm">
+            <section class="formulario__grid">
+                <div class="formulario__estilo">
+                    <div class="formulario__estilo__div">
+                        <label for="age">Edad del solicitante</label>
+                        <input type="number" id="age" name="age" required>
+                    </div>
+                    <div class="formulario__estilo__div">
+                        <label for="income">Ingresos</label>
+                        <input type="number" id="income" name="income" required>
+                    </div>
+                    <div class="formulario__estilo__div">
+                        <label for="loanTenure">Tenencia del Préstamo</label>
+                        <input type="number" id="loanTenure" name="loanTenure" required>
+                    </div>
+                    <div class="formulario__estilo__div">
+                        <label for="profileScore">Profile Score</label>
+                        <input type="number" id="profileScore" name="profileScore" required>
                     </div>
                 </div>
-                <div class="formulario__estilo__div">
-                    <label for="employmentProfile">Perfil de Empleo</label>
-                    <select name="employmentProfile" id="employmentProfile" required>
-                        <option value="" disabled selected>Seleccione una opción</option>
-                        <option value="Freelancer">Freelancer</option>
-                        <option value="Salaried">Salaried</option>
-                        <option value="Self-Employed">Self-Employed</option>
-                        <option value="Student">Student</option>
-                        <option value="Unemployed">Unemployed</option>
-                    </select>
+                <div class="formulario__estilo">
+                    <div class="formulario__estilo__div">
+                        <label for="ltvRatio">Ratio de LTV</label>
+                        <input type="number" id="ltvRatio" name="ltvRatio" step="0.01" required>
+                    </div>
+                    <div class="formulario__estilo__div">
+                        <label for="A-existingCustomer">Cliente Existente</label>
+                        <div class="estilo__exite__customer">
+                            <span><input type="radio" name="existingCustomer" id="A-existingCustomer" value="Yes"
+                                    required>
+                                <label for="A-existingCustomer">Yes</label></span>
+                            <span><input type="radio" name="existingCustomer" id="B-existingCustomer" value="No"
+                                    required>
+                                <label for="B-existingCustomer">No</label></span>
+                        </div>
+                    </div>
+                    <div class="formulario__estilo__div">
+                        <label for="employmentProfile">Perfil de Empleo</label>
+                        <select name="employmentProfile" id="employmentProfile" required>
+                            <option value="" disabled selected>Seleccione una opción</option>
+                            <option value="Freelancer">Freelancer</option>
+                            <option value="Salaried">Salaried</option>
+                            <option value="Self-Employed">Self-Employed</option>
+                            <option value="Student">Student</option>
+                            <option value="Unemployed">Unemployed</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button id="botonPredict" type="submit">Predict Credit Score</button>
+                        <button id="botonBorrar" type="reset">Borrar</button>
+                    </div>
                 </div>
-                <div>
-                    <button id="botonPredict" type="submit">Predict Credit Score</button>
-                    <button id="botonBorrar" type="reset">Borrar</button>
-                </div>
+            </section>
+            <div>
+                <h3 class="predictionResult" id="predictionResult"></h3>
             </div>
-            <h3 id="predictionResult"></h3>
         </form>
     </main>
     <footer>
         <span class="footer-text">IA grupo 5</span>
     </footer>
 </body>
+
 </html>
