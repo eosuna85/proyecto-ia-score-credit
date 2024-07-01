@@ -76,10 +76,10 @@ Este proyecto es parte del trabajo grupal de Inteligencia Artificial en la forma
 
 ## Colaboradores
 
-- Nombre del contacto: Evelyn Marrero
+- Nombre del contacto: Claudia Acosta
 - Email: alemusita@hotmail.com
 
-- Nombre del contacto: Claudia Acosta
+- Nombre del contacto: Evelyn Marrero
 - Email: evelyn.mar54@gmail.com
 
 - Nombre del contacto: Erika Osuna
